@@ -1,0 +1,4 @@
+# ninja log v5
+0	3772	1743437041796795232	/home/taoye/code/DINO-main/models/dino/ops/build/temp.linux-x86_64-3.7/home/taoye/code/DINO-main/models/dino/ops/src/cpu/ms_deform_attn_cpu.o	8ecaac0e641d17a0
+1	12302	1743437050316626490	/home/taoye/code/DINO-main/models/dino/ops/build/temp.linux-x86_64-3.7/home/taoye/code/DINO-main/models/dino/ops/src/cuda/ms_deform_attn_cuda.o	c7cb7f01c527291
+0	16272	1743437054288547913	/home/taoye/code/DINO-main/models/dino/ops/build/temp.linux-x86_64-3.7/home/taoye/code/DINO-main/models/dino/ops/src/vision.o	2c6e30fb1433f6b3

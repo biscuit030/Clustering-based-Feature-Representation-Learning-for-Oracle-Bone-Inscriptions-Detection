@@ -1,0 +1,52 @@
+model_name: sparse_rcnn
+data:
+  train_annotation_path:  /home/taoye/code/data/bigdatasetcoco/annotations/instances_train2017.json
+#  train_annotation_path: /home/huffman/data/annotations/instances_val2017.json
+  val_annotation_path: /home/taoye/code/data/bigdatasetcoco/annotations/instances_val2017.json
+  stand_annotation_path: /home/taoye/code/data/bigdatasetcoco/annotations/instances_stand2017.json
+  train_img_root: /home/taoye/code/data/bigdatasetcoco/train2017
+#  train_img_root: /home/huffman/data/val2017
+  val_img_root: /home/taoye/code/data/bigdatasetcoco/val2017
+  stand_img_root: /home/taoye/code/data/bigdatasetcoco/stand2017
+  max_thresh: 640
+  use_crowd: False
+  batch_size: 4
+  num_workers: 2
+  debug: False
+  remove_blank: Ture
+
+model:
+  num_cls: 1
+  backbone: resnet50
+  pretrained: True
+  alpha: 0.25
+  gamma: 2.0
+  iou_type: giou
+  iou_weights: 1.0
+  # iou_weights: 0.25
+  iou_cost: 1.0
+  cls_weights: 1.0
+  # cls_weights: 0.25
+  cls_cost: 1.0
+  l1_weights: 2.0
+  # l1_weights: 0.50
+  l1_cost: 1.0
+  num_proposals: 128
+
+optim:
+  optimizer: AdamW
+  lr: 0.000025
+  milestones: [27,33]
+  warm_up_iter: 20
+  weight_decay: 0.0001
+  epochs: 36
+  sync_bn: False
+  amp: False
+  alpha: 0.1
+  warm_up_factor: 0.01
+val:
+  interval: 1
+  weight_path: weights
+
+
+gpus: 0,1
