@@ -4,7 +4,7 @@ Oracle Bone Inscriptions (OBIs), play a crucial role in understanding ancient Ch
 To address these challenges, we propose a novel clustering-based feature space representation learning method. Our approach uniquely leverages the Oracle Bones Character (OBC) font library dataset as prior knowledge to enhance feature extraction in the detection network through clustering-based representation learning. The method incorporates a specialized loss function derived from clustering results to optimize feature representation, which is then integrated into the total network loss.
 We validate the effectiveness of our method by conducting experiments on two OBIs detection dataset using three mainstream detection frameworks: Faster R-CNN, DETR, and Sparse R-CNN. Through extensive experimentation, all frameworks demonstrate significant performance improvements.
 
-![DETR](.github/DETR.png)
+![pipline](./pipline.png)
 
 
 # Usage - OBIs detection
